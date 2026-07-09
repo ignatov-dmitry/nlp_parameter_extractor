@@ -1,0 +1,9 @@
+services:
+  nlp-extractor:
+    build: .
+    container_name: nlp_parameter_extractor
+    restart: unless-stopped
+    ports:
+      - "4000:8000"
+    volumes:
+      - ./data:/app/data
